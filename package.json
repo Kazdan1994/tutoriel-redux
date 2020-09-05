@@ -1,0 +1,12 @@
+{
+  "name": "tutoriel-redux",
+  "version": "1.0.0",
+  "description": "Découvrir le gestionnaire d'état centralisé [Redux]",
+  "main": "index.js",
+  "repository": "git@github.com:Kazdan1994/tutoriel-redux.git",
+  "author": "Kazdan1994 <arthurjacquemin2@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "redux": "^4.0.5"
+  }
+}
