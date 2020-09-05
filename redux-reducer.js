@@ -1,3 +1,7 @@
+import {createStore} from "redux";
+
+console.log('test redux')
+
 const initialState = [
     {
         id: 1,
@@ -23,6 +27,12 @@ function TodoReducer(state = initialState, action) {
     }
 }
 
-const state = TodoReducer(undefined, {});
-const newState = TodoReducer(state, {type: ADD_TODO, payload: {title: 'Demo'}})
-console.log(state, newState)
+const store = createStore(
+    TodoReducer,
+    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+    );
+store.subscribe(() => console.log(store.getState()))
+
+for (let i = 0; i < 5; i++) {
+    store.dispatch({ type: ADD_TODO, payload: { title: 'Demo ' + i} })
+}
